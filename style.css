@@ -1,0 +1,215 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+html,
+body {
+
+    height: 100%;
+    width: 100%;
+
+}
+
+#main {
+
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+
+#nav {
+
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw;
+
+}
+
+#nav h1 {
+
+    font-size: 2vw;
+    font-weight: 400;
+
+}
+
+#nav-prt0 {
+
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 1.1vmax;
+
+}
+
+#nav #nav-prt0 button {
+
+    padding: 0.7vw 1.7vw;
+    font-size: 1.1vmax;
+    background-color: #b09aef;
+    color: #fff;
+    border-radius: 5px;
+
+}
+
+#nav #nav-prt0 i {
+
+    font-size: 1.6vmax;
+    display: none;
+
+}
+
+#content {
+
+    width: 100%;
+    height: calc(100% - 90px);
+    display: flex;
+    position: relative;
+
+}
+
+#content #left {
+
+    width: 50%;
+    height: 100%;
+    padding: 6.5vw 6vw;
+
+}
+
+#content #left h1 {
+
+    width: 85%;
+    font-size: 3vmax;
+
+}
+
+#content #left h1 span {
+
+    color: #b09aef;
+
+}
+
+#content #left p {
+
+    width: 75%;
+    font-size: 1.1vmax;
+    line-height: 3vh;
+    margin-top: 4.3vh;
+    margin-bottom: 6.5vh;
+
+}
+
+#content #left button {
+
+    font-size: 1.5vw;
+    text-transform: capitalize;
+    background: #b09aef;
+    color: #fff;
+    padding: 0.8vw 1.7vw;
+    border-radius: 5px;
+
+}
+
+#content #right {
+
+    width: 50%;
+    height: 100%;
+
+}
+
+#content #right img {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+@media (max-width:600px) {
+
+    #nav {
+
+        height: 60px;
+        padding: 0 6vw;
+
+    }
+
+    #nav #nav-prt0 {
+
+        width: 25%;
+
+    }
+
+    #nav h1 {
+
+        font-size: 3vmax;
+
+    }
+
+    #nav #nav-prt0 h3 {
+
+        display: none;
+
+    }
+
+    #nav #nav-prt0 i {
+
+        display: block;
+        font-size: 2.3vmax;
+
+    }
+
+    #content {
+
+        flex-direction: column;
+
+    }
+
+    #content #left {
+
+        width: 100%;
+        height: calc(100%-60px);
+
+    }
+
+    #content #left h1 {
+
+        font-size: 9vw;
+
+    }
+
+    #content #left p {
+
+        width: 85%;
+        font-size: 3vw;
+        line-height: 2.2vh;
+        margin-top: 2vh;
+        margin-bottom: 3vh;
+
+    }
+
+    #content #left button {
+
+        font-size: 2.5vw;
+
+    }
+
+    #content #right {
+
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+
+    }
+
+}
