@@ -2,6 +2,7 @@
 
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -12,6 +13,7 @@ body {
 
     height: 100%;
     width: 100%;
+    overflow: hidden;
 
 }
 
@@ -26,26 +28,37 @@ body {
 #nav {
 
     width: 100%;
-    height: 90px;
+    height: 5vw;
+    /* background-color: #b09aef; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 3vw;
 
 }
 
-#nav h1 {
-
-    font-size: 2vw;
-    font-weight: 400;
-
+#nav img {
+    height: 10vw;
+    width: 10vw;
 }
 
 #nav-prt0 {
 
     width: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-transform: capitalize;
     font-size: 1.1vmax;
@@ -58,7 +71,7 @@ body {
     font-size: 1.1vmax;
     background-color: #b09aef;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 0.3vw;
 
 }
 
@@ -69,10 +82,16 @@ body {
 
 }
 
+#nav-prt0 h3:hover {
+    text-decoration: underline;
+}
+
 #content {
 
     width: 100%;
-    height: calc(100% - 90px);
+    height: calc(100% - 5vw);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
 
@@ -80,15 +99,15 @@ body {
 
 #content #left {
 
-    width: 50%;
+    width: 40%;
     height: 100%;
-    padding: 6.5vw 6vw;
+    padding: 6.5vw 0vw 0 6vw;
 
 }
 
 #content #left h1 {
 
-    width: 85%;
+    width: 100%;
     font-size: 3vmax;
 
 }
@@ -116,13 +135,13 @@ body {
     background: #b09aef;
     color: #fff;
     padding: 0.8vw 1.7vw;
-    border-radius: 5px;
+    border-radius: 0.3vw;
 
 }
 
 #content #right {
 
-    width: 50%;
+    width: 60%;
     height: 100%;
 
 }
@@ -132,43 +151,53 @@ body {
     width: 100%;
     height: 100%;
 
+
 }
 
-@media (max-width:600px) {
+@media (max-width:800px) {
 
     #nav {
 
-        height: 60px;
+        height: 14vw;
+        /* background-color: #b09aef; */
         padding: 0 6vw;
 
     }
 
-    #nav #nav-prt0 {
-
-        width: 25%;
-
+    #nav img {
+        height: 16vw;
+        width: 16vw;
     }
 
-    #nav h1 {
 
-        font-size: 3vmax;
+    #nav #nav-prt0 {
+
+        width: 65%;
 
     }
 
     #nav #nav-prt0 h3 {
 
-        display: none;
+        font-size: 2vw;
 
     }
 
-    #nav #nav-prt0 i {
+    #nav-prt0 h3:hover {
+        text-decoration: none;
+    }
 
-        display: block;
-        font-size: 2.3vmax;
-
+    #nav #nav-prt0 button {
+        font-size: 1.5vmax;
+        border-radius: 0.4vw;
     }
 
     #content {
+
+        -webkit-box-orient: vertical;
+
+        -webkit-box-direction: normal;
+
+        -ms-flex-direction: column;
 
         flex-direction: column;
 
@@ -177,7 +206,7 @@ body {
     #content #left {
 
         width: 100%;
-        height: calc(100%-60px);
+        height: calc(100%-14vw);
 
     }
 
@@ -192,14 +221,16 @@ body {
         width: 85%;
         font-size: 3vw;
         line-height: 2.2vh;
-        margin-top: 2vh;
-        margin-bottom: 3vh;
+        margin-top: 6vh;
+        margin-bottom: 4vh;
 
     }
 
     #content #left button {
 
         font-size: 2.5vw;
+        padding: 1vw 2vw;
+        border-radius: 0.4vw;
 
     }
 
@@ -207,9 +238,65 @@ body {
 
         height: 100%;
         width: 100%;
-        background-position: center;
-        background-size: cover;
 
+    }
+
+}
+
+@media (max-width:600px) {
+
+    #nav {
+        height: 14vw;
+        width: 100%;
+        /* background-color: #b09aef; */
+        padding: 0 6vw;
+    }
+
+    #nav img {
+        height: 16vw;
+        width: 16vw;
+    }
+
+    #nav #nav-prt0 {
+        -webkit-box-pack: right;
+        -ms-flex-pack: right;
+        justify-content: right;
+        gap: 5vw;
+    }
+
+    #nav #nav-prt0 h3 {
+        font-size: 2vw;
+        display: none;
+    }
+
+    #nav #nav-prt0 button {
+        font-size: 1.2vmax;
+        border-radius: 0.4vw;
+    }
+
+    #nav #nav-prt0 i {
+        display: block;
+        font-size: 2.3vmax;
+    }
+
+    #content #left h1 {
+        width: 80%;
+    }
+
+    #content #left p {
+        margin-top: 2vh;
+        margin-bottom: 3vh;
+    }
+
+    #content #left button {
+        font-size: 3vw;
+        padding: 1vw 2vw;
+        border-radius: 0.4vw;
+    }
+
+    #content #right img {
+        height: 88.85%;
+        width: 100%;
     }
 
 }
